@@ -15,7 +15,7 @@ const App: FC = () => {
       useEffect(() => {console.log(potionsToShow)});
 
       return (
-        <div className="p-6 max-w-[1200px] mx-auto">
+        <div className="p-6 max-w-[1200px] mx-auto bg-gray-300">
           <h1 className="text-3xl font-bold mb-6">Potion Shop</h1>
           
           <div className="overflow-x-auto pb-4 scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-100">
@@ -37,7 +37,7 @@ const App: FC = () => {
             />
           )}
 
-          <div className='space-y-4'>
+          <div className='space-y-4 p-6 max-w-[1200px] mx-auto'>
             <PotionFilter
               potionsData={potions}
               changePotion={setPotionsToShow}

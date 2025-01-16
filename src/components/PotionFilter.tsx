@@ -55,10 +55,11 @@ const PotionFilter: React.FC<ModalProps> = ({ potionsData, changePotion, potions
       }
 
     return (
-        <div>
+        <div className="overflow-x-auto">
          <div>
             {/* LEVEL FILTER */}
             <h1>LEVEL</h1>
+            <h2 className="text-gray-600 text-center">{seletectedLevel}</h2>
             <input
                 type="range"
                 min="0"
@@ -68,7 +69,6 @@ const PotionFilter: React.FC<ModalProps> = ({ potionsData, changePotion, potions
                 placeholder="LEVEL"
                 className="border p-2 w-70"
                 required />
-            <p className="text-gray-600 text-center">{seletectedLevel}</p>
         </div>
         
         {/* RARITY FILTER */}
@@ -81,7 +81,7 @@ const PotionFilter: React.FC<ModalProps> = ({ potionsData, changePotion, potions
           </select>
        
       </div>
-
+     <div className="p-4">
         {/* EFFECT FILTER */}
         <input
         type="text"
@@ -91,11 +91,12 @@ const PotionFilter: React.FC<ModalProps> = ({ potionsData, changePotion, potions
         className="border p-2 w-100"
         required
       />
+      </div>
 
 
     {/* CRAFTING FILTER */}
       <div>
-      <button className="relative z-auto" onClick={totalCraftingTime}>
+      <button className="text-gray-500 hover:bg-purple-400 bg-purple-200 rounded relative" onClick={totalCraftingTime}>
             CRAFTING TIME
         </button>
         

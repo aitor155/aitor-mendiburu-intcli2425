@@ -44,7 +44,7 @@ const App: FC = () => {
 
           <h1 className='text-3xl font-bold p-8'>FILTER</h1>
 
-          <div className='inline-block space-y-4 p-6 max-w-[1200px] mx-auto bg-blue-300'>
+          <div className='inline-block space-y-4 p-6 max-w-[1200px] mx-auto bg-blue-300 border-double'>
             <PotionFilter
               potionsData={potions}
               changePotion={setPotionsToShow}

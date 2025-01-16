@@ -24,10 +24,15 @@ const PotionModal: React.FC<ModalProps> = ({ potion, onClose }) => {
           </div>
 
           <div>
+            <h3 className="font-semibold text-lg mb-2">Usage Instructions</h3>
+            <p className="text-gray-600">{potion.usage.instructions}</p>
+          </div>
+
+          <div>
             <h3 className="font-semibold text-lg mb-2">Ingredients</h3>
             <ul className="list-disc list-inside text-gray-600">
               {potion.ingredients.map((ingredient, index) => (
-                <li key={index}>{ingredient.name}</li>
+                <li key={index}>{ingredient.name} with location {ingredient.origin.location} and region {ingredient.origin.region}</li>
               ))}
             </ul>
           </div>
@@ -45,6 +50,14 @@ const PotionModal: React.FC<ModalProps> = ({ potion, onClose }) => {
               {potion.effects.secondary.map((effect, index) => (
                 <li key={index}>{effect.attribute}</li>
               ))}
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="font-semibold text-lg mb-2">Restrictions</h3>
+            <ul className="list-disc list-inside text-gray-600">
+                <li>LevelRequired: {potion.usage.restrictions.levelRequirement}</li>
+                <li>ClassRestricion: {potion.usage.restrictions.classRestrictions}</li>
             </ul>
           </div>
 

@@ -95,7 +95,7 @@ const PotionFilter: React.FC<ModalProps> = ({ potionsData, changePotion, potions
 
     {/* CRAFTING FILTER */}
       <div>
-      <button className="relative" onClick={totalCraftingTime}>
+      <button className="relative z-auto" onClick={totalCraftingTime}>
             CRAFTING TIME
         </button>
         
